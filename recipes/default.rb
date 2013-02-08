@@ -3,7 +3,7 @@
 # Recipe:: default
 #
 
-sitename = "#{node.django_nginx.sitename}"
+sitename = "#{node.chef_django_nginx.sitename}"
 
 # Install nginx using system packages if not installed
 include_recipe "nginx::default"
@@ -14,9 +14,9 @@ template "/etc/nginx/sites-available/#{sitename}" do
   owner "root"
   mode "0644"
   variables({
-    :statichome => "#{node.django_nginx.statichome}",
-    :listenaddr => "#{node.django_nginx.listenaddr}",
-    :gunicorn_port => "#{node.django_nginx.gunicorn_port}"
+    :statichome => "#{node.chef_django_nginx.statichome}",
+    :listenaddr => "#{node.chef_django_nginx.listenaddr}",
+    :gunicorn_port => "#{node.chef_django_nginx.gunicorn_port}"
   })
 end
 

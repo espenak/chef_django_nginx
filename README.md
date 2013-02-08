@@ -18,18 +18,18 @@ Attributes
 
 Required
 ---------
-- ``node["django_nginx"]["statichome"]`` - Path to a directory containing a
+- ``node["chef_django_nginx"]["statichome"]`` - Path to a directory containing a
   subdirectory named ``static/`` where the static files collected by
   ``collectstatic`` is located.
 
 Optional
 --------
-- ``node["django_nginx"]["gunicorn_port"]`` - The gunicorn port.
+- ``node["chef_django_nginx"]["gunicorn_port"]`` - The gunicorn port.
   Defaults to ``8002``.
-- ``node["django_nginx"]["sitename"]`` - The name of the site
+- ``node["chef_django_nginx"]["sitename"]`` - The name of the site
   config placed in ``/etc/nginx/sites-available/``.
   Defaults to ``django``.
-- ``node["django_nginx"]["listenaddr"]`` - The listen-address
+- ``node["chef_django_nginx"]["listenaddr"]`` - The listen-address
   for the nginx virtual host. Usually just a port number.
   Defaults to ``80``.
 
